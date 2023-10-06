@@ -23,18 +23,18 @@ body {
 .hamburger {
   cursor: pointer;
   position: absolute;
-  top: 5em;
+  top: 80px;
   right: 5%;
-  margin-left: -2em;
+  margin-left: -32px;
   margin-top: -45px;
-  width: 2em;
+  width: 32px;
   height: 45px;
   z-index: 5;
 }
 
 .hamburger div {
   position: relative;
-  width: 3em;
+  width: 48px;
   height: 7px;
   border-radius: 3px;
   background-color: #17f1d1;
@@ -58,7 +58,7 @@ body {
 }
 
 .nav-wrapper {
-  position: relative;
+  position: sticky;
   overflow: hidden;
   overflow-y: auto;
   height: 100%;
@@ -113,10 +113,11 @@ nav a:hover {
 #toggle:checked + .hamburger + .nav {
   top: 0;
   transform: scale(1);
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
-.logo{
+.logo a{
+  text-decoration: none;
   font-size: 50px;
   color: #17f1d1;
   text-align: left;
@@ -189,7 +190,6 @@ nav a:hover {
   padding: 15px 25px;
   border: 2px solid #17f1d1;
   border-radius: 100px;
-  animation: xdir 2s infinite;
 }
 
 .resume p:hover{
@@ -304,23 +304,10 @@ nav a:hover {
   border: 2px solid #a374ff;
   border-radius: 100px;
   background-color: #a374ff;
-  animation: xdir 2s infinite;
 }
 
 .gt a p:hover{
   background-color: transparent;
-}
-
-@keyframes xdir {
-	0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-	40% {
-    transform: translateX(-30px);
-  }
-	60% {
-   transform: translateX(-35px);
-  }
 }
 
 .forms{
@@ -375,7 +362,7 @@ nav a:hover {
 }
 
 footer {
-  position: absolute;
+  position: relative;
   width: 100%;
   background: #17f1d1;
   min-height: 200px;
