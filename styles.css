@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Dela Gothic One', cursive;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: #1d1d1f;
+}
+
+#toggle {
+  display: none;
+}
+
+.hamburger {
+  cursor: pointer;
+  position: absolute;
+  top: 5em;
+  right: 5%;
+  margin-left: -2em;
+  margin-top: -45px;
+  width: 2em;
+  height: 45px;
+  z-index: 5;
+}
+
+.hamburger div {
+  position: relative;
+  width: 3em;
+  height: 7px;
+  border-radius: 3px;
+  background-color: #17f1d1;
+  margin-top: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  transform: scale(0);
+  border-radius: 20px;
+}
+
+.nav-wrapper {
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+  height: 100%;
+}
+
+nav {
+  text-align: left;
+  margin-left: 25%;
+}
+
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: #1d1d1f;
+  font-size: 90px;
+  display: inline-block;
+  margin-top: 40px;
+  transition: color 0.2s ease-in-out;
+  letter-spacing: 1px;
+}
+
+nav a:hover {
+  color: #a374ff;
+  animation: 1s flicker infinite;
+}
+
+@keyframes flicker
+{
+0% {opacity:0;}
+9% {opacity:0;}
+10% {opacity:.5;}
+13% {opacity:0;}
+20% {opacity:.5;}
+25% {opacity:1;}
+}
+
+#toggle:checked + .hamburger .bar1 {
+  transform: rotate(-45deg);
+  margin-top: 25px;
+}
+
+#toggle:checked + .hamburger .bar3 {
+  opacity: 0;
+  transform: rotate(45deg);
+}
+
+#toggle:checked + .hamburger .bar2 {
+  transform: rotate(45deg);
+  margin-top: -7px;
+}
+
+#toggle:checked + .hamburger + .nav {
+  top: 0;
+  transform: scale(1);
+}
+
+.logo{
+  font-size: 50px;
+  color: #17f1d1;
+  text-align: left;
+  left: 5%;
+  position: absolute;
+  top: 20px;
+}
+
+.greet {
+  align-items: center;
+  display: flex;
+  margin-top: 300px;
+}
+
+.hello h2 {
+  font-size: 105px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: white
+}
+
+.hello h4 {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  color: #17f1d1;
+}
+
+.hello h4 span{
+  font-family: "Courier New", Courier, monospace;
+  color:#a374ff;
+}
+
+.me{
+  margin-left: 50px;
+}
+
+.me img{
+  width: 400px;
+  border-radius: 34% 66% 65% 35% / 24% 41% 59% 76%;
+}
+
+.intro{
+  display: flex;
+  justify-content: center;
+}
+
+.about{
+  word-spacing: 10px;
+  color: white;
+  margin: 100px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.about p span{
+  color:#a374ff;
+}
+
+.project-about {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.project h1 {
+  text-align: center;
+  font-size: 35px;
+  letter-spacing: 3px;
+  color: #17f1d1;
+  margin-top: 200px;
+  padding-bottom: 60px;
+}
+
+.proj a img {
+  height: 450px;
+  width: 450px;
+  border-radius: 40px;
+}
+
+.proj h3 a {
+  text-decoration: none;
+  font-size: 35px;
+  letter-spacing: 4px;
+  color: #a374ff;
+}
+
+.about-proj {
+  max-width: 650px;
+  color: white;
+  font-size: 30px;
+  letter-spacing: 1.5px;
+  line-height: 50px;
+  word-spacing: 5px;
+  text-align: left;
+}
+
+.gitpro{
+  margin-top: 50px;
+}
+
+.gitpro a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 15px 25px;
+  border: 2px solid #17f1d1;
+  border-radius: 100px;
+}
+
+.gitpro a:hover{
+  color: #000;
+  background-color: #17f1d1;
+  animation: 2s flicker infinite;
+}
+
+@keyframes flicker
+{
+0% {opacity:0;}
+9% {opacity:0;}
+10% {opacity:.5;}
+13% {opacity:0;}
+20% {opacity:.5;}
+25% {opacity:1;}
+}
+
+.hire-me{
+  display: flex;
+  align-items: center;
+  margin: 100px;
+  justify-content: space-evenly;
+}
+
+.ask h1 {
+  font-size: 100px;
+  color: white;
+}
+
+.ask h1 p{
+  width: 100px;
+}
+
+.gt a{
+  text-decoration: none;
+}
+
+.gt a p{
+  color: white;
+  font-size: 32px;
+  padding: 15px 35px;
+  border: 2px solid #a374ff;
+  border-radius: 100px;
+  background-color: #a374ff;
+  animation: bounce 2s infinite;
+}
+
+.gt a p:hover{
+  background-color: transparent;
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+	40% {
+    transform: translateX(-30px);
+  }
+	60% {
+   transform: translateX(-35px);
+  }
+}
+
