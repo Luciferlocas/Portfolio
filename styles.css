@@ -113,14 +113,18 @@ nav a:hover {
   overflow: hidden;
 }
 
+.navbar{
+  position: fixed;
+  left: 5%;
+  top: 20px;
+}
+
 .logo a{
   text-decoration: none;
   font-size: 3.125rem;
   color: var(--fontcolor);
   text-align: left;
-  left: 5%;
   position: absolute;
-  top: 20px;
 }
 
 .greet {
