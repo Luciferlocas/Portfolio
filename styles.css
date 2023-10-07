@@ -231,6 +231,11 @@ nav a:hover {
   height: 450px;
   width: 450px;
   border-radius: 40px;
+  opacity: 50%;
+}
+
+.proj a img:hover{
+  opacity: 100%;
 }
 
 .proj h3 a {
