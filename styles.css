@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
+:root{
+  --backcolor : #1d1d1f;
+  --fontcolor : #17f1d1;
+  --buttoncolor: #a374ff;
+  font-size: 16px;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -13,7 +20,7 @@ html{
 body {
   max-width: 100%;
   overflow-x: hidden;
-  background-color: #1d1d1f;
+  background-color: var(--backcolor);
 }
 
 #toggle {
@@ -22,11 +29,11 @@ body {
 
 .hamburger {
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   top: 80px;
   right: 5%;
-  margin-left: -32px;
-  margin-top: -45px;
+  margin-left: -1em;
+  margin-top: -2.825em;
   width: 32px;
   height: 45px;
   z-index: 100000;
@@ -37,18 +44,18 @@ body {
   width: 48px;
   height: 7px;
   border-radius: 3px;
-  background-color: #17f1d1;
-  margin-top: 8px;
+  background-color: var(--fontcolor);
+  margin-top: 0.5em;
   transition: all 0.3s ease-in-out;
 }
 
 .nav {
   position: fixed;
-  width: 100%;
+  width: 50%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: white;
   top: -100%;
-  left: 0;
+  left: 50%;
   right: 0;
   bottom: 0;
   overflow: hidden;
@@ -56,6 +63,7 @@ body {
   transform: scale(0);
   border-radius: 20px;
   z-index: 5;
+  opacity: 90%;
 }
 
 .nav-wrapper {
@@ -66,27 +74,27 @@ body {
 
 nav {
   text-align: left;
-  margin-left: 25%;
+  margin-left: 15%;
 }
 
 nav a {
   position: relative;
   text-decoration: none;
-  color: #1d1d1f;
-  font-size: 90px;
+  color: var(--backcolor);
+  font-size: 6.625rem;
   display: inline-block;
-  margin-top: 40px;
+  margin-top: 0.25em;
   letter-spacing: 1px;
+  /* opacity: 100%; */
 }
 
 nav a:hover {
-  color: #a374ff;
-  animation: 1s flicker infinite;
+  color: var(--buttoncolor);
 }
 
 #toggle:checked + .hamburger .bar1 {
   transform: rotate(-45deg);
-  margin-top: 25px;
+  margin-top: 1.5625em;
 }
 
 #toggle:checked + .hamburger .bar3 {
@@ -96,7 +104,7 @@ nav a:hover {
 
 #toggle:checked + .hamburger .bar2 {
   transform: rotate(45deg);
-  margin-top: -7px;
+  margin-top: -0.5em;
 }
 
 #toggle:checked + .hamburger + .nav {
@@ -107,8 +115,8 @@ nav a:hover {
 
 .logo a{
   text-decoration: none;
-  font-size: 50px;
-  color: #17f1d1;
+  font-size: 3.125rem;
+  color: var(--fontcolor);
   text-align: left;
   left: 5%;
   position: absolute;
@@ -118,30 +126,30 @@ nav a:hover {
 .greet {
   align-items: center;
   display: flex;
-  margin-top: 300px;
+  margin-top: 14.75em;
 }
 
 .hello h2 {
-  font-size: 105px;
+  font-size: 6.5rem;
   letter-spacing: 2px;
   margin-bottom: 20px;
   color: white
 }
 
 .hello h4 {
-  font-size: 20px;
+  font-size: 1.25rem;
   font-family: "Courier New", Courier, monospace;
-  color: #17f1d1;
+  color: var(--fontcolor);
   animation: 1s flicker infinite;
 }
 
 .hello h4 span{
   font-family: "Courier New", Courier, monospace;
-  color:#a374ff;
+  color:var(--buttoncolor);
 }
 
 .me{
-  margin-left: 50px;
+  margin-left: 3.125em;
 }
 
 .me img{
@@ -157,13 +165,13 @@ nav a:hover {
 .about{
   word-spacing: 10px;
   color: white;
-  margin: 100px 100px 0 100px;
+  margin: 6.25em 6.25em 0 6.25em;
   text-align: center;
   font-size: 30px;
 }
 
 .about p span{
-  color:#a374ff;
+  color:var(--buttoncolor);
 }
 
 @keyframes xdir {
@@ -185,33 +193,34 @@ nav a:hover {
 .resume p{
   color: white;
   float: right;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 1px;
-  padding: 15px 25px;
-  border: 2px solid #17f1d1;
+  padding: 1em 1.5em;
+  border: 2px solid var(--fontcolor);
   border-radius: 100px;
   animation: xdir 2s infinite;
 }
 
 .resume p:hover{
-  background-color: #17f1d1;
+  background-color: var(--fontcolor);
+  color: var(--backcolor);
 }
 
 .project-about {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 3.125em;
 }
 
 .project h1 {
   text-align: center;
-  font-size: 35px;
+  font-size: 2.2rem;
   letter-spacing: 3px;
-  color: #17f1d1;
-  margin-top: 200px;
-  padding-bottom: 60px;
+  color: var(--fontcolor);
+  margin-top: 4.5em;
+  padding-bottom: 3.75em;
 }
 
 .proj a img {
@@ -222,15 +231,15 @@ nav a:hover {
 
 .proj h3 a {
   text-decoration: none;
-  font-size: 35px;
+  font-size: 2.2rem;
   letter-spacing: 4px;
-  color: #a374ff;
+  color: var(--buttoncolor);
 }
 
 .about-proj {
   max-width: 650px;
   color: white;
-  font-size: 30px;
+  font-size: 2rem;
   letter-spacing: 1.5px;
   line-height: 50px;
   word-spacing: 5px;
@@ -238,24 +247,23 @@ nav a:hover {
 }
 
 .gitpro{
-  margin-top: 50px;
+  margin-top: 3.125em;
 }
 
 .gitpro a{
   text-decoration: none;
   color: #fff;
-  font-size: 15px;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 1px;
-  padding: 15px 25px;
-  border: 2px solid #17f1d1;
+  padding: 1em 1.5em;
+  border: 2px solid var(--fontcolor);
   border-radius: 100px;
 }
 
 .gitpro a:hover{
-  color: #000;
-  background-color: #17f1d1;
-  animation: 2s flicker infinite;
+  color: var(--backcolor);
+  background-color: var(--fontcolor);
 }
 
 @keyframes flicker
@@ -271,7 +279,7 @@ nav a:hover {
 .skills{
   display: flex;
   justify-content: space-between;
-  margin: 100px;
+  margin: 1em 6.25em;
 }
 
 .skills img{
@@ -282,12 +290,12 @@ nav a:hover {
 .hire-me{
   display: flex;
   align-items: center;
-  margin: 200px;
+  margin: 7.5em;
   justify-content: space-evenly;
 }
 
 .ask h1 {
-  font-size: 100px;
+  font-size: 6.25rem;
   color: white;
 }
 
@@ -301,11 +309,11 @@ nav a:hover {
 
 .gt a p{
   color: white;
-  font-size: 32px;
-  padding: 15px 35px;
-  border: 2px solid #a374ff;
+  font-size: 2rem;
+  padding: 1em 2.2em;
+  border: 2px solid var(--buttoncolor);
   border-radius: 100px;
-  background-color: #a374ff;
+  background-color: var(--buttoncolor);
   animation: xdir 2s infinite;
 }
 
@@ -321,57 +329,58 @@ nav a:hover {
 
 .form-field{
   padding-top: 20px;
-  font-size: 26px;
+  font-size: 1.625rem;
   color: white;
 }
 
 .label{
-  padding-left: 30px;
+  padding-left: 1.875em;
 }
 
 .form-field input{
   background-color: transparent;
-  border-color: #17f1d1;
-  font-size: 32px;
+  border-color: var(--fontcolor);
+  font-size: 2rem;
   font-display: inherit;
-  padding-top: 30px;
+  padding-top: 1em;
   border-radius: 30px;
 }
 
 .input-text{
   color: #fff;
+  padding: 0 0 1em 1em;
 }
 
 .submit{
   display: flex;
   justify-content: space-around;
-  padding-top: 30px;
+  padding-top: 1.875em;
 }
 
 .submit-btn{
-  border-color: #a374ff;
-  font-size: 32px;
+  border-color: var(--buttoncolor);
+  font-size: 2rem;
   color: white;
   font-display: inherit;
   background-color: transparent;
-  padding: 15px;
+  padding: 1em;
   cursor: pointer;
   border-radius: 30px;
 }
 
 .submit-btn:hover{
-  background-color: #a374ff;
-  color: black;
+  background-color: var(--buttoncolor);
+  color: var(--backcolor);
 }
 
 footer {
   position: relative;
   width: 100%;
-  background: #17f1d1;
+  background: var(--fontcolor);
   min-height: 200px;
-  padding: 20px 50px;
+  padding: 1.25em 2.125em;
   display: flex;
-  margin-top: 200px;
+  margin-top: 7.5em;
   justify-content: center;
   align-items: center;
   border-radius: 30% 30% 0 0;
@@ -383,7 +392,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px 0;
+  margin: 0.5em 0;
 }
 
 .social-icon__item{
@@ -393,7 +402,7 @@ footer {
 .social-icon__link {
   font-size: 2rem;
   color: #fff;
-  margin: 0 10px;
+  margin: 0 0.5em;
   display: inline-block;
   transition: 0.5s;
 }
@@ -403,12 +412,12 @@ footer {
 
 .pro{
   height: 46px;
-  padding-left: 15px;
+  padding-left: 1em;
 }
 
 footer p {
-  color: black;
-  margin: 15px 0 10px 0;
+  color: var(--backcolor);
+  margin: 1em 0 0.5em 0;
   font-size: 3rem;
   font-weight: 300;
 }
