@@ -4,7 +4,15 @@
   --backcolor : #1d1d1f;
   --fontcolor : #17f1d1;
   --buttoncolor: #a374ff;
+  --violet : rgb(103,58,183);
   font-size: 16px;
+  --magic : linear-gradient(
+    to right,
+    var(--buttoncolor),
+    var(--violet),
+    var(--fontcolor),
+    var(--buttoncolor)
+  );
 }
 
 *{
@@ -20,7 +28,7 @@ html{
 body {
   max-width: 100%;
   overflow-x: hidden;
-  background-color: var(--backcolor);
+  background: var(--backcolor);
 }
 
 #toggle {
@@ -80,16 +88,28 @@ nav {
 nav a {
   position: relative;
   text-decoration: none;
-  color: var(--backcolor);
   font-size: 6.625rem;
   display: inline-block;
   margin-top: 0.25em;
   letter-spacing: 1px;
-  /* opacity: 100%; */
+  background: var(--magic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
 }
 
 nav a:hover {
   color: var(--buttoncolor);
+  animation: bmove 2.5s linear infinite;
+}
+
+@keyframes bmove{
+  from{
+    background-position: 0% center;
+  }
+  to{
+    background-position: -200% center;
+  }
 }
 
 #toggle:checked + .hamburger .bar1 {
@@ -308,10 +328,6 @@ nav a:hover {
   color: white;
 }
 
-.ask h1 p{
-  width: 100px;
-}
-
 .gt a{
   text-decoration: none;
 }
@@ -429,4 +445,205 @@ footer p {
   margin: 1em 0 0.5em 0;
   font-size: 3rem;
   font-weight: 300;
+}
+
+@media only screen and (max-width: 768px) {
+  
+  .hamburger {
+    cursor: pointer;
+    position: fixed;
+    top: 63px;
+    right: 10%;
+  }
+
+  nav {
+    text-align: left;
+    margin-left: 5%;
+  }
+  
+  nav a {
+    position: relative;
+    text-decoration: none;
+    font-size: 2rem;
+    display: inline-block;
+    margin-top: 3em;
+    letter-spacing: 1px;
+    background: var(--magic);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%;
+  }
+
+  .logo a{
+    text-decoration: none;
+    font-size: 2.125rem;
+    color: var(--fontcolor);
+    text-align: left;
+    position: absolute;
+  }
+
+  .greet{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hello h2 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    color: white;
+    text-align: center;
+  }
+
+  .hello h4 {
+    font-size: 0.75rem;
+    font-family: "Courier New", Courier, monospace;
+    color: var(--fontcolor);
+    animation: 1s flicker infinite;
+  }
+
+  .me img{
+    width: 300px;
+    border-radius: 34% 66% 65% 35% / 24% 41% 59% 76%;
+    margin-top: 20px;
+    padding-right: 30px;
+  }
+
+  .about{
+    color: white;
+    font-size: 0.85rem;
+  }
+
+  .resume p{
+    color: white;
+    font-size: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 1em 1.5em;
+    border: 2px solid var(--fontcolor);
+    border-radius: 100px;
+    animation: xdir 2s infinite;
+  }
+
+  .project-about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project h1 {
+    text-align: center;
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+    color: var(--fontcolor);
+    margin-top: 4.5em;
+    padding-bottom: 3.75em;
+  }
+  
+  .proj a img {
+    height: 350px;
+    width: 350px;
+    border-radius: 40px;
+    opacity: 50%;
+  }
+  
+  .about-proj {
+    max-width: 650px;
+    color: white;
+    font-size: 1rem;
+    padding: 1em;
+    letter-spacing: 1.5px;
+    text-align: center;
+  }
+
+  .skills{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills img{
+    height: 200px;
+    cursor: pointer;
+  }
+
+  .hire-me{
+    display: flex;
+    flex-direction: column;
+    margin: 4.5em;
+    justify-content: space-evenly;
+  }
+
+  .ask h1 {
+    font-size: 2.25rem;
+    color: white;
+  }
+
+  .gt{
+    padding-top: 30px;
+  }
+
+  .gt a p{
+    width: 120px;
+    color: white;
+    font-size: 1rem;
+    padding: 1em 2.2em;
+    border: 2px solid var(--buttoncolor);
+    border-radius: 100px;
+    background-color: var(--buttoncolor);
+    animation: xdir 2s infinite;
+  }
+
+  .form-field{
+    padding-top: 20px;
+    font-size: 1.2rem;
+    color: white;
+  }
+  
+  .label{
+    padding-left: 0.875em;
+  }
+  
+  .form-field input{
+    background-color: transparent;
+    border-color: var(--fontcolor);
+    font-size: 0.8rem;
+    font-display: inherit;
+    padding-top: 1em;
+    border-radius: 30px;
+  }
+
+  .submit-btn{
+    border-color: var(--buttoncolor);
+    font-size: 1rem;
+    color: white;
+    font-display: inherit;
+    background-color: transparent;
+    padding: 1.2em;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+  
+  footer {
+    position: relative;
+    width: 83vw;
+    background: var(--fontcolor);
+    min-height: 100px;
+    display: flex;
+    margin-top: 7.5em;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30% 30% 0 0;
+    flex-direction: column;
+  }
+
+  footer p {
+    color: var(--backcolor);
+    font-size: 1.2rem;
+  }
+  
+  .pro{
+    height: 30px;
+    padding-left: 0.5em;
+  }
+  
 }
