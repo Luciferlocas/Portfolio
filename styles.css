@@ -462,16 +462,8 @@ footer p {
   }
   
   nav a {
-    position: relative;
-    text-decoration: none;
     font-size: 2rem;
-    display: inline-block;
     margin-top: 3em;
-    letter-spacing: 1px;
-    background: var(--magic);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 200%;
   }
 
   .logo a{
